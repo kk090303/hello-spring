@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 @SpringBootTest
-@Transactional //
+@Transactional
 class MemberServiceIntegrationTest {
 
     @Autowired MemberService memberService;

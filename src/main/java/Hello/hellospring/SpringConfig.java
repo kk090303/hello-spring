@@ -1,9 +1,11 @@
-package Hello.hellospring.service;
+package Hello.hellospring;
 
+import Hello.hellospring.aop.TimeTraceAop;
 import Hello.hellospring.repository.JdbcTemplateMemberRepository;
 import Hello.hellospring.repository.JpaMemberRepository;
 import Hello.hellospring.repository.MemberRepository;
 import Hello.hellospring.repository.MemoryMemberRepository;
+import Hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -42,6 +44,7 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
 
     /*
     @Bean
